@@ -1,7 +1,7 @@
 # Binaries
-gcptool
+*.dmg
 *.exe
-
+*.pkg
 # Go
 *.so
 *.dylib
