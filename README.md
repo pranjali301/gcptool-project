@@ -3,7 +3,7 @@
 This repository contains:
 
 - A Google Cloud Function (in the `function/` directory)
-- A custom CLI tool (`gcptool` in `cmd/gcptool/`) for deploying and managing the function
+- A custom CLI tool (`gcptool` in `/gcptool/`) for deploying and managing the function
 - GitHub Actions workflow for CI/CD
 
 ---
@@ -22,7 +22,7 @@ This repository contains:
 This repository contains:
 
 - A Google Cloud Function (in the `function/` directory)
-- A custom CLI tool (`gcptool` in `cmd/gcptool/`) for deploying and managing the function
+- A custom CLI tool (`gcptool` in `/gcptool/`) for deploying and managing the function
 - GitHub Actions workflow for CI/CD
 
 ---
@@ -40,7 +40,7 @@ This repository contains:
 
 ```
 .
-├── cmd/gcptool/         # CLI tool source code
+├──  gcptool/         # CLI tool source code
 ├── function/            # Cloud Function source code
 ├── .github/workflows/   # GitHub Actions workflows
 ├── go.mod
@@ -55,7 +55,7 @@ This repository contains:
 
 ```sh
 go mod tidy
-cd cmd/gcptool
+cd /gcptool
 go mod tidy
 ```
 
@@ -69,7 +69,7 @@ go test -v
 ### 3. Build the CLI tool
 
 ```sh
-cd cmd/gcptool
+cd /gcptool
 go build -o ../../gcptool .
 ```
 
@@ -100,7 +100,7 @@ gcloud functions deploy my-cloud-function \
 On every push or pull request to `main`:
 
 - Tests are run (`function/`)
-- The CLI tool is built (`cmd/gcptool/`)
+- The CLI tool is built (`/gcptool/`)
 - On push to `main`, the function is deployed using the CLI tool
 
 **Secrets required:**
