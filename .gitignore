@@ -1,0 +1,22 @@
+# Binaries
+gcptool
+*.exe
+
+# Go
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# IDE
+.vscode/
+.idea/
+
+# GCP
+service-account*.json
+.gcloud/
+
+# OS
+.DS_Store
+Thumbs.db
